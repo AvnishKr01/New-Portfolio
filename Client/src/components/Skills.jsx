@@ -1,15 +1,30 @@
 import React from 'react';
 import {
     FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaPython, FaGitAlt, FaDocker, FaAws, FaFigma,
-    FaPuzzlePiece, FaUsers, FaSyncAlt, FaComments, FaChalkboardTeacher, FaInfinity, FaGithub
+    FaPuzzlePiece, FaUsers, FaSyncAlt, FaComments, FaChalkboardTeacher, FaInfinity, FaGithub, FaJava
 } from 'react-icons/fa';
 import {
     SiNextdotjs, SiTypescript, SiTailwindcss, SiRedux, SiThreedotjs,
-    SiExpress, SiPostgresql, SiMongodb, SiGraphql, SiJest, SiVite, SiPostman
+    SiExpress, SiPostgresql, SiMongodb, SiGraphql, SiJest, SiVite, SiPostman,
+    SiJavascript, SiCplusplus, SiC, SiMysql
 } from 'react-icons/si';
 import { TbApi } from 'react-icons/tb';
 
 const skillsData = [
+    {
+        category: 'Programming Languages',
+        icon: '💻',
+        color: '#00ff88', // Neon Green
+        items: [
+            { name: 'JavaScript', icon: <SiJavascript /> },
+            { name: 'Python', icon: <FaPython /> },
+            { name: 'TypeScript', icon: <SiTypescript /> },
+            { name: 'Java', icon: <FaJava /> },
+            { name: 'C++', icon: <SiCplusplus /> },
+            { name: 'C', icon: <SiC /> },
+            { name: 'SQL', icon: <SiMysql /> }
+        ]
+    },
     {
         category: 'Frontend',
         icon: '🎨',
@@ -72,7 +87,7 @@ const Skills = () => {
             <div className="blob blob-4"></div>
 
             <div className="container">
-                <h2 className="section-title">Tech & Languages</h2>
+                <h2 className="section-title">Technical Skills</h2>
                 <div className="skill-glass-wrapper">
                     <div className="skills-container-compact">
                         {skillsData.map((skillGroup, index) => (
