@@ -1,8 +1,10 @@
 import React from 'react';
 import { FaTrophy, FaMedal, FaCertificate, FaStar, FaAward, FaExternalLinkAlt, FaBriefcase } from 'react-icons/fa';
 import { HiOfficeBuilding } from 'react-icons/hi';
-import tcs from '../assets/tcs.jpg';
-import microsoft from '../assets/MICRO.jpg';
+// import tcs from '../assets/tcs.jpg';
+// import microsoft from '../assets/MICRO.jpg';
+import tcs from "../assets/TCS.pdf";
+import microsoft from "../assets/Microsoft.pdf";
 
 const experienceData = [
     {
