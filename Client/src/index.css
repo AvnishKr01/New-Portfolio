@@ -1003,6 +1003,291 @@ textarea.form-input {
   }
 }
 
+/* Experience & Achievements Section */
+.experience {
+  padding: 5rem 0;
+  position: relative;
+  background: linear-gradient(to bottom, #0a0a1a, var(--bg-primary));
+}
+
+.experience-main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  margin-top: var(--spacing-md);
+}
+
+.experience-column,
+.certifications-column,
+.rewards-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.experience-heading {
+  font-size: 1.3rem;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.experience-heading svg {
+  color: var(--accent-secondary);
+  font-size: 1.2rem;
+}
+
+/* Timeline Styles */
+.timeline {
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--accent-primary), var(--accent-secondary));
+  border-radius: 2px;
+}
+
+.timeline-item {
+  position: relative;
+  padding-bottom: 1.5rem;
+}
+
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.timeline-icon {
+  position: absolute;
+  left: -2rem;
+  width: 32px;
+  height: 32px;
+  background: var(--bg-primary);
+  border: 2px solid var(--accent-secondary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-secondary);
+  font-size: 0.9rem;
+}
+
+.timeline-content {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  padding: 1rem;
+  transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: var(--accent-secondary);
+  transform: translateX(3px);
+}
+
+.timeline-content h4 {
+  font-size: 1rem;
+  color: var(--text-primary);
+  margin-bottom: 0.2rem;
+}
+
+.timeline-content .company {
+  display: block;
+  color: var(--accent-secondary);
+  font-weight: 500;
+  font-size: 0.85rem;
+  margin-bottom: 0.2rem;
+}
+
+.timeline-content .duration {
+  display: block;
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-content p {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Certifications List - Single Column */
+.certifications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.certification-card {
+  display: flex;
+  gap: 0.8rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  padding: 1rem;
+  transition: all 0.3s ease;
+}
+
+.certification-card:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: var(--card-color);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.certification-icon {
+  width: 45px;
+  height: 45px;
+  min-width: 45px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  color: var(--card-color);
+  transition: all 0.3s ease;
+}
+
+.certification-card:hover .certification-icon {
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.1);
+}
+
+.certification-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.certification-content h4 {
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  margin-bottom: 0.2rem;
+}
+
+.certification-issuer {
+  display: block;
+  color: var(--card-color);
+  font-weight: 600;
+  font-size: 0.8rem;
+  margin-bottom: 0.1rem;
+}
+
+.certification-date {
+  display: block;
+  color: var(--text-secondary);
+  font-size: 0.7rem;
+  margin-bottom: 0.4rem;
+}
+
+.certification-content p {
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  line-height: 1.4;
+  margin: 0 0 0.6rem 0;
+  flex: 1;
+}
+
+.view-certificate-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: linear-gradient(135deg, var(--card-color), rgba(255, 255, 255, 0.1));
+  color: var(--text-primary);
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.view-certificate-btn:hover {
+  transform: translateX(3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  color: #fff;
+}
+
+.view-certificate-btn svg {
+  font-size: 0.65rem;
+}
+
+/* Rewards List - Single Column */
+.rewards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.reward-card {
+  display: flex;
+  gap: 0.8rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  padding: 1rem;
+  transition: all 0.3s ease;
+}
+
+.reward-card:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: var(--card-color);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.reward-icon {
+  width: 45px;
+  height: 45px;
+  min-width: 45px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  color: var(--card-color);
+  transition: all 0.3s ease;
+}
+
+.reward-card:hover .reward-icon {
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.1);
+}
+
+.reward-content h4 {
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  margin-bottom: 0.2rem;
+}
+
+.reward-event {
+  display: block;
+  color: var(--card-color);
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.reward-content p {
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .hero-content {
@@ -1024,6 +1309,10 @@ textarea.form-input {
   }
 
   .about-content {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-main-grid {
     grid-template-columns: 1fr;
   }
 
